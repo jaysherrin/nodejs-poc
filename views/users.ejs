@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p><%= message %></p>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <% for(var i=0; i < data.length; i++) { %>
+    <tr>
+        <td><%= data[i].userId %></td>
+        <td><%= data[i].name %></td>
+        <td><%= data[i].email %></td>
+    </tr>
+    <% } %>
+</table>
+<form method="POST">
+    <div><input name="name" ></div>
+    <div><input name="email" ></div>
+    <div><input type="submit"></div>
+</form>
+</body>
+</html>
